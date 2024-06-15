@@ -1,0 +1,145 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+body{
+	font-size: 20px;
+	overflow-x: hidden;
+	
+
+}
+.logo{
+	height: 130px;
+	width: auto;
+	float: left;
+	margin-top: 20px;
+	border-radius: 70%;
+    margin-left: -130px;
+    margin-top: 10px;
+}
+
+.clearfixx:after{
+	content: ".";
+	visibility: hidden;
+	display: block;
+	height: 0px;
+	clear: both;
+}
+.row{
+	max-width: 1180px;
+	margin: 0 auto;
+}
+
+.ext{
+    color:black;
+    font-weight:1000;
+    text-decoration: solid;
+}
+ul{
+	float:right;
+	margin-top: 50px;
+}
+
+ul li{
+	display: inline-block;
+	list-style: none;
+	margin-left: 50px;
+
+}
+
+ul li a{
+	padding: 10px 0;
+	color:black;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 90%; 
+	font-weight: 100;
+}
+
+ul li a:hover{
+	border-bottom: 2px solid orange;
+}
+
+header{
+	background-image:url('../images/contactu.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100vh;
+}
+
+  .contact-form{
+    width: 85%;
+    max-width: 600px;
+    background: #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 30px 40px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 20px #000000b3;
+    font-family: "Montserrat",sans-serif;
+  }
+  .contact-form h1{
+    margin-top: 0;
+    font-weight: 200;
+  }
+  .txtb{
+    border:1px solid gray;
+    margin: 8px 0;
+    padding: 12px 18px;
+    border-radius: 8px;
+  }
+  .txtb label{
+    display: block;
+    text-align: left;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  .txtb input,.txtb textarea{
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 18px;
+    margin-top: 6px;
+  }
+  .btn{
+    display: inline-block;
+    background: #f003fc;
+    padding: 14px 0;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 8px;
+    width: 100%;
+  }
+  #phone {
+    outline: 0;
+  }
+  #phone:valid {
+    border-color: green;
+  }
+  #phone:focus:invalid {
+    border-color: red;
+  }
+  .footer{
+    
+    width: 100%;
+    padding: 20px;
+    background-color: #464E2E;
+    color: #AAA492;
+    text-align: center;
+    line-height: 35px;
+}
+.handle{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 50%;
+  }

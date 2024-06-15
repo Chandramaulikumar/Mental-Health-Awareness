@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MHA</title>
+<link rel="stylesheet" type="text/css" href="style5.css">
+<style>
+    
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+  <header>
+		<nav>
+			<div class="row clearfix">
+				<img src="images/logo.png" class="logo">
+				
+			
+					
+				
+				
+				<ul>
+					
+					<li><a class="ext" href="index.html">HOME</a></li>	
+
+					<li><a class="ext" href="near.html">CONSULTATION</a></li>
+					<li><a class="ext" href="podcast.html">PODCAST</a></li>
+					<li><a class="ext" href="aboutus.html">ABOUT US</a></li>
+					<li><a  class="ext" href="contactu.php"> CONTACT US</a></li>
+					
+      				
+					
+				</ul>
+			</div>
+		</nav>
+    
+    <div class="main">
+
+<h2>Near by Doctor:-</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter City Names to find nearest Doctor.." title="Type in a city">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:10%;">Title</th>
+    <th style="width:30%;">Full-Name</th>
+    <th style="width:25%;">Specification</th>
+    <th style="width:15%;">City</th>
+    <th style="width:20%;">click for consultation</th>
+  </tr>
+  <tr>
+    <td>Mr.</td>
+    <td>Rajiv Saxena</td>
+    <td>Psychologist</td>
+    <td>New Delhi</td>
+    <td><a href="registration_form.php" class="btn btn-full">CLICK</a> </td>
+  </tr>
+  <tr>
+    <td>Mr.</td>
+    <td>Subodh Kumar</td>
+    <td>Psychologist</td>
+    <td>patna</td>
+    <td><a href="registration_form.php" class="btn btn-full">CLICK</a> </td>
+  </tr>
+  <tr>
+    <td>Mrs.</td>
+    <td>Richa Ghosh</td>
+    <td>Counsellert</td>
+    <td>Pune</td>
+    <td><a href="registration_form.php" class="btn btn-full">CLICK</a> </td>
+  </tr>
+  <tr>
+    <td>Mr.</td>
+    <td>Alok Malhotra</td>
+    <td>Psychiatrist</td>
+    <td>Darbhanga</td>
+    <td><a href="registration_form.php" class="btn btn-full">CLICK</a></td>
+  </tr>
+  <tr>
+    <td>Mrs.</td>
+    <td>Riya Saxena</td>
+    <td>Psychologist</td>
+    <td>Chandigarh</td>
+    <td><a href="registration_form.php" class="btn btn-full">CLICK</a></td>
+  </tr>
+  <tr>
+    <td>Mr.</td>
+    <td>Mohit Rana</td>
+    <td>Psychiatrist</td>
+    <td>Bhopal</td>
+    <td><a href="registration_form.php" class="btn btn-full">CLICK</a> </td>
+  </tr>
+ <tr>
+  <tr>
+    <td>Mrs.</td>
+    <td>Ruchika Rana</td>
+    <td>Psychologist</td>
+    <td>Haridwar</td>
+    <td><a href="registration_form.php" class="btn btn-full">CLICK</a> </td>
+  </tr>
+  <tr>
+    <td>Mr.</td>
+    <td>Rahul Kumar</td>
+    <td>Psychologist</td>
+    <td>Ranchi</td>
+    <td><a href="registration_form.php" class="btn btn-full">CLICK</a> </td>
+  </tr>
+  <tr>
+    <td>Mrs.</td>
+    <td>Priya Jha</td>
+    <td>Psychiarist</td>
+    <td>Mumbai</td>
+    <td><a href="registration_form.php" class="btn btn-full">CLICK</a> </td>
+  </tr>
+  <tr>
+    <td>Mr.</td>
+    <td>Anand Shrma</td>
+    <td>Psychologist</td>
+    <td>New Delhi</td>
+    <td><a href="registration_form.php" class="btn btn-full">CLICK</a></td>
+  </tr>
+    <td>Mr.</td>
+    <td>Alok Amar</td>
+    <td>Psychiatrist</td>
+    <td>Banglore</td>
+    <td><a href="registration_form.php" class="btn btn-full">CLICK</a></td>
+  </tr>
+  
+</div>
+</table>
+</header>
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[3];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+</body>
+</html>
